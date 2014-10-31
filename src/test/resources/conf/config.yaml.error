@@ -1,0 +1,5 @@
+host: localhost
+
+port: invalid_port
+
+showEvaluationDetails: invalid_boolean

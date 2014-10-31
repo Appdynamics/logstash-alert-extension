@@ -1,0 +1,8 @@
+#TCP host
+host: localhost
+
+#TCP port
+port: 3333
+
+#Whether to show the evaluation details that triggered the event
+showEvaluationDetails: false
