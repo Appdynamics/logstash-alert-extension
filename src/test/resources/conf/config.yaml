@@ -1,5 +1,13 @@
 host: localhost
 
-port: 3333
+port: 3334
 
 showEvaluationDetails: true
+
+ssl:
+  enable: false
+  allowSelfSignedCert: false
+  keystorePath:
+  keystorePassword: 
+  truststorePath:
+  truststorePassword:

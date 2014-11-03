@@ -22,4 +22,10 @@
 		<appender-ref ref="ConsoleAppender" />
 	</logger>
 
+	<logger name="org.apache" additivity="false">
+		<level value="info" />
+		<appender-ref ref="RollingFileAppender" />
+		<appender-ref ref="ConsoleAppender" />
+	</logger>
+
 </log4j:configuration>

@@ -6,3 +6,12 @@ port: 3333
 
 #Whether to show the evaluation details that triggered the event
 showEvaluationDetails: false
+
+#SSL config
+ssl:
+  enable: false
+  allowSelfSignedCert: false
+  keystorePath:
+  keystorePassword: 
+  truststorePath:
+  truststorePassword:

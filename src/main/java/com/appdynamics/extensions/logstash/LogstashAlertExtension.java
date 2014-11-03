@@ -14,6 +14,7 @@ import com.appdynamics.extensions.logstash.config.ConfigUtil;
 import com.appdynamics.extensions.logstash.config.Configuration;
 import com.appdynamics.extensions.logstash.json.Alert;
 import com.appdynamics.extensions.logstash.json.AlertBuilder;
+import com.appdynamics.extensions.logstash.ssl.SocketFactory;
 
 /**
  * Sends Appdynamics Alert to Logstash using TCP connection
@@ -43,6 +44,11 @@ public class LogstashAlertExtension {
         
         try {
             config = configUtil.readConfig(CONFIG_FILENAME, Configuration.class);
+            
+            if (LOGGER.isDebugEnabled()) {
+            	LOGGER.debug("Config details: " + config);
+            }
+            
             LogstashAlertExtension alertExtension = new LogstashAlertExtension(config);
             alertExtension.processAnEvent(args);
             LOGGER.info("Logstash Extension completed successfully.");
@@ -79,7 +85,7 @@ public class LogstashAlertExtension {
     	DataOutputStream outToServer = null;
     	
     	try {
-			clientSocket = new Socket(config.getHost(), config.getPort());
+			clientSocket = SocketFactory.createSocket(config.getSsl(), config.getHost(), config.getPort());
 			outputStream = clientSocket.getOutputStream();  
 			outToServer = new DataOutputStream(clientSocket.getOutputStream());
 			outToServer.writeBytes(message);

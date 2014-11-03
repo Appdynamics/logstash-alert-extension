@@ -23,9 +23,10 @@ import org.powermock.modules.junit4.PowerMockRunner;
 import com.appdynamics.extensions.logstash.config.ConfigUtil;
 import com.appdynamics.extensions.logstash.config.Configuration;
 import com.appdynamics.extensions.logstash.exception.NoEventReceivedException;
+import com.appdynamics.extensions.logstash.ssl.SocketFactory;
 
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({LogstashAlertExtension.class})
+@PrepareForTest({LogstashAlertExtension.class, SocketFactory.class})
 @PowerMockIgnore({"org.apache.*", "javax.xml.*"})
 public class LogstashAlertExtensionTest {
 	
