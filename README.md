@@ -50,9 +50,9 @@ The Logstash Alerting Extension enables AppDynamics to post custom notifications
 
  2. Find the zip file at 'target/logstash-alert-extension-\<version\>.zip'.
 
- 3. Unzip the zip file into <CONTROLLER_HOME_DIR>/custom/actions/. You should have  <CONTROLLER_HOME_DIR>/custom/actions/logstash-alert created.
+ 3. Unzip the zip file into \<CONTROLLER_HOME_DIR\>/custom/actions/. You should have  \<CONTROLLER_HOME_DIR\>/custom/actions/logstash-alert created.
 
- 4. Check if you have custom.xml file in <CONTROLLER_HOME_DIR>/custom/actions/ directory. If yes, add the following xml to the <custom-actions> element.
+ 4. Check if you have custom.xml file in \<CONTROLLER_HOME_DIR\>/custom/actions/ directory. If yes, add the following xml to the <custom-actions> element.
  
 	```
       <action>
@@ -83,7 +83,7 @@ The Logstash Alerting Extension enables AppDynamics to post custom notifications
 
 	Uncomment the appropriate executable tag based on windows or linux/unix machine.
     
-5. Update the config.yaml file in <CONTROLLER_HOME_DIR>/custom/actions/logstash-alert/conf/.
+5. Update the config.yaml file in \<CONTROLLER_HOME_DIR\>/custom/actions/logstash-alert/conf/.
 
 ###Configuration
 
